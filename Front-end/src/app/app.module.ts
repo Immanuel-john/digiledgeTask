@@ -7,6 +7,8 @@ import { ListComponent } from './components/list/list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {StudentService} from './shared/student.service';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+
 const appRoutes: Routes=[
   {path:'',component:ListComponent},
   {path:'createUpdate',component:CreateUpdateComponent}
@@ -21,6 +23,7 @@ const appRoutes: Routes=[
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [StudentService],

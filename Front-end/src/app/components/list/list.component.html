@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title">Student Managemnt System</h4>
+    <h4 class="card-title">Student Management System</h4>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -16,11 +16,11 @@
       <tbody>
         <tr *ngFor="let student of students">
           <td>{{student._id}}</td>
-          <td>{{student._name}}</td>
-          <td>{{student._roll}}</td>
-          <td>{{student._sex}}</td>
-          <td>{{student._age}}</td>
-          <td>{{student._clas}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.roll}}</td>
+          <td>{{student.sex}}</td>
+          <td>{{student.age}}</td>
+          <td>{{student.clas}}</td>
           <td>
             <button class="btn btn-danger">Delete</button>
             <button class="btn btn-primary">Update</button>

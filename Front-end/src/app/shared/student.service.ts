@@ -6,6 +6,7 @@ import {Student} from '../student';
   providedIn: 'root'
 })
 export class StudentService {
+  private student:Student;
   private baseUri:string="http://localhost:8080";
   private headers = new HttpHeaders().set('Content-type','application/json');
   constructor(private http:HttpClient) { }
@@ -24,5 +25,12 @@ export class StudentService {
 
   deleteStudent(id:string){
     return this.http.delete(this.baseUri+'/delete/'+id, {headers:this.headers});
+  }
+
+  setter(student:Student){
+    this.student=student;
+  }
+  getter(){
+    return this.student;
   }
 }
