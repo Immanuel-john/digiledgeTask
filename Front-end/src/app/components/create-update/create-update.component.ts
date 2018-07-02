@@ -15,6 +15,7 @@ export class CreateUpdateComponent implements OnInit {
     this.student=this.studentService.getter();
   }
   createOrUpdate(){
+    if(this.student._id==undefined){
     this.studentService.createStudent(this.student).subscribe(
       data=>{
         console.log(data);
@@ -24,5 +25,17 @@ export class CreateUpdateComponent implements OnInit {
         console.log(error);
       }
     )
+    }else{
+      this.studentService.updateStudent(this.student).subscribe(
+        data=>{
+          console.log(data);
+          this.router.navigate(['/']);
+        },
+        error=>{
+          console.log(error);
+        }
+      )
+
+    }
   }
 }

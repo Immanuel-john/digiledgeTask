@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {StudentService} from '../../shared/student.service';
 import {Student} from '../../student';
-
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -9,7 +9,7 @@ import {Student} from '../../student';
 })
 export class ListComponent implements OnInit {
   private students:Student[];
-  constructor(private _studentService:StudentService) { }
+  constructor(private _studentService:StudentService, private router:Router) { }
 
   ngOnInit() {
     this.readStudents();
@@ -25,6 +25,11 @@ export class ListComponent implements OnInit {
         console.log(error);
       }
     )
+  }
+
+  doUpdate(student){
+    this._studentService.setter(student);
+    this.router.navigate(['/createUpdate']);
   }
 
 }
