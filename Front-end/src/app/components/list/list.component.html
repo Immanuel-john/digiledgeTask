@@ -1,3 +1,32 @@
-<p>
-  list works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Student Managemnt System</h4>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Roll Number</th>
+          <th>Sex</th>
+          <th>Age</th>
+          <th>Class</th>
+          <th>Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{student._id}}</td>
+          <td>{{student._name}}</td>
+          <td>{{student._roll}}</td>
+          <td>{{student._sex}}</td>
+          <td>{{student._age}}</td>
+          <td>{{student._clas}}</td>
+          <td>
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-primary">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

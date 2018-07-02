@@ -5,7 +5,7 @@ var studentSchema = mongoose.Schema({
     roll: {type:String},
     sex: {type:String},
     age: {type:String},
-    class: {type:String}
+    clas: {type:String}
 
 });
 

@@ -9,7 +9,7 @@ router.post('/create',(req,res,next) => {
         roll: req.body.roll,
         sex: req.body.sex,
         age: req.body.age,
-        class: req.body.class
+        clas: req.body.class
 
     });
     newStudent.save((err,student)=>{
@@ -38,7 +38,7 @@ router.put('/update',(req,res,next) => {
         student.roll = req.body.roll;
         student.sex = req.body.sex;
         student.age = req.body.age;
-        student.class = req.body.class;
+        student.clas = req.body.class;
         student.save((err,student) => {
             if(err)
                res.status(200).json({errmsg: err});
