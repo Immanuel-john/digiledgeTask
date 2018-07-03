@@ -14,7 +14,16 @@ Basic CRUD operations:
 **To run locally:**
 
 - Clone this repo
+- Run cd REST
 - Run npm install
-- Run npm start
+- Run node index
 
+*In new terminal*
+- Run cd Front-end [Redirect to Front-end Folder]
+- Run npm install
+- Run ng serve
+
+*In new terminal as root
+
+-Run mongod
 
