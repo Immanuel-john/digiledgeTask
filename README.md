@@ -14,6 +14,7 @@ Basic CRUD operations:
 **To run locally:**
 
 - Clone this repo
+- Run npm init
 - Run npm install
 - Run npm start
 
