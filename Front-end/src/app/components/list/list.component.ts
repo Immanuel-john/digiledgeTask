@@ -32,4 +32,19 @@ export class ListComponent implements OnInit {
     this.router.navigate(['/createUpdate']);
   }
 
+  doDelete(student){
+    this._studentService.deleteStudent(student._id).subscribe(
+      data=>{
+          for(var i=0;i<this.students.length;i++){
+            if(this.students[i]._id==student._id)
+             
+            this.students.splice(this.students.indexOf(student),1);
+            
+          }
+      },
+      error=>{
+       // console.log(error);
+      }
+    )
+  }
 }

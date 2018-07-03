@@ -8,8 +8,8 @@ router.post('/create',(req,res,next) => {
         name: req.body.name,
         roll: req.body.roll,
         sex: req.body.sex,
-        age: req.body.age,
-        clas: req.body.class
+        age: req.body.age
+        
 
     });
     newStudent.save((err,student)=>{
@@ -38,7 +38,6 @@ router.put('/update',(req,res,next) => {
         student.roll = req.body.roll;
         student.sex = req.body.sex;
         student.age = req.body.age;
-        student.clas = req.body.class;
         student.save((err,student) => {
             if(err)
                res.status(200).json({errmsg: err});
@@ -49,7 +48,7 @@ router.put('/update',(req,res,next) => {
     
 });
 
-router.delete('/delete',(req,res,next) => {
+router.delete('/delete/:id',(req,res,next) => {
     Student.findOneAndRemove({_i: req.params.id}, (err,student) => {
         if(err)
                res.status(200).json({errmsg: err});

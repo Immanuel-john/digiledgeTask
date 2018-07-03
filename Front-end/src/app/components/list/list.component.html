@@ -9,7 +9,6 @@
           <th>Roll Number</th>
           <th>Sex</th>
           <th>Age</th>
-          <th>Class</th>
           <td>Operations</td>
         </tr>
       </thead>
@@ -20,9 +19,8 @@
           <td>{{student.roll}}</td>
           <td>{{student.sex}}</td>
           <td>{{student.age}}</td>
-          <td>{{student.clas}}</td>
           <td>
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-danger" (click)="doDelete(student)">Delete</button>
             <button class="btn btn-primary" (click)="doUpdate(student)">Update</button>
           </td>
         </tr>
